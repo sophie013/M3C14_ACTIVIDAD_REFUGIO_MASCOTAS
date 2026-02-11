@@ -1,0 +1,25 @@
+/* Skin para el Navbar Menta */
+
+.navbar-dino {
+    background-color: #e0f2f1 !important; /* Menta */
+}
+
+/*dinopatitas nombre navbar*/
+.brand-center {
+    color: #4db6ac !important; /* Verde agua */
+    font-size: 1.5rem;
+}
+
+/* Skin de los Botones */
+.btn-primary {
+    background-color: #5aba9e !important; /* Verde Dino */
+}
+
+.btn-primary:hover {
+    background-color: #307862 !important;
+}
+
+/* Títulos de Card */
+.card-title {
+    color: #2c3e50;
+}

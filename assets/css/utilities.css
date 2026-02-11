@@ -1,8 +1,7 @@
 /*.text-center o .mt-2*  arreglos o parches */
-.text-pastel {
-  color: #ff7aa2;
-}
 
-.bg-pastel-soft {
-  background-color: #fff5f8;
-}
+
+
+.text-mint { color: #4db6ac !important; }
+.bg-pastel-soft { background-color: #f1f8f7; }
+.shadow-dino { box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; }

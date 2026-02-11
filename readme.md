@@ -1,10 +1,10 @@
 contenido
 
-navbar tipo anvorguesa incluyendo markdowns(?)
+navbar tipo anvorguesa incluyendo markdowns(?) 
 inicio/
-historia /nuestro refugio. (Listo word paz)
+historia /nuestro refugio. (historia con una fotito) en la parte de nuestro refugio colocar un carrusel de imagenes
 adopta 
-Tienda
+Tienda solidaria 
 visitanos 
 contacto 
 oportunidad laboral -voluntariado
@@ -17,7 +17,7 @@ hogar temporal
 donacion 
 -------------------------------------------
 
-historia 
+historia /word listo :3 paz <3 
 
 -------------------------------------------
 -elementos de la web------------------------
@@ -42,6 +42,7 @@ formulario
 equeño formulario 
 redes sociales
 
+back to top boton de retorno 
 ------------------------------------
 instructivo para otras donaciones (alimentos , ropa , juguetes , medicinas)
 

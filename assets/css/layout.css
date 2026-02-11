@@ -2,23 +2,19 @@
 
 /*header*/
 
-/* Fondo general del navbar */
-.pastel-navbar {
-  background-color: #f8e8ee;
-  padding: 15px 0;
+.navbar-dino {
+    padding: 1rem 0;
 }
 
-/* Logo centrado */
-.logo-pastel {
-  font-size: 1.8rem;
-  color: #444;
+.site-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
 }
 
-/* Separación horizontal de links */
-.navbar-nav .nav-link {
-  margin: 0 10px;
+/* Espaciado de links en desktop */
+@media (min-width: 992px) {
+    .navbar-nav .nav-link {
+        margin: 0 10px;
+    }
 }
-
-/*fin del header*/
-
-

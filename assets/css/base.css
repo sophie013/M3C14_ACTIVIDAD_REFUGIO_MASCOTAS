@@ -1,5 +1,10 @@
-/*body, tipografía, imágenes*/
-
 body {
-  font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .titulo-dinopatitas, .navbar-brand {
+    font-family: 'Lora', serif;
+    font-weight: 700;
 }

@@ -3,122 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adopta un Amigo 🐾</title>
-    <meta name="description" content="Sitio web de adopción de mascotas. Encuentra a tu nuevo mejor amigo.">
+    <title>Adopta un Amigo 🐾 | Dinopatitas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Estilos OOCSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/objects.css">
-    <link rel="stylesheet" href="assets/css/utilities.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    
+    <link rel="stylesheet" href="assets/css/main.css"> <link rel="stylesheet" href="assets/css/utilities.css">
 </head>
-
 <body>
 
-    <!-- Header -->
-  
+    <nav class="navbar navbar-expand-lg navbar-dino shadow-sm">
+        <div class="container">
+            <a class="navbar-brand brand-center" href="#">Dinopatitas</a>
 
-<nav class="navbar navbar-expand-lg navbar-light pastel-navbar">
-  <div class="container">
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- Botón hamburguesa -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRefugio">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Contenido -->
-    <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarRefugio">
-
-      <!-- Lado izquierdo -->
-      <ul class="navbar-nav">
-
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Inicio</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-            Nosotros
-          </a>
-          <ul class="dropdown-menu pastel-dropdown">
-            <li><a class="dropdown-item" href="#">Historia</a></li>
-            <li><a class="dropdown-item" href="#">Nuestro Refugio</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Adopta</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tienda</a>
-        </li>
-
-      </ul>
-
-      <!-- Logo centro -->
-      <a class="navbar-brand mx-auto text-center fw-bold logo-pastel" href="#">
-         Jurassic Bark 
-      </a>
-
-      <!-- Lado derecho -->
-      <ul class="navbar-nav">
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Visítanos</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link contacto-link" href="#">Contacto</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-            Oportunidades
-          </a>
-          <ul class="dropdown-menu pastel-dropdown">
-            <li><a class="dropdown-item" href="#">Laboral</a></li>
-            <li><a class="dropdown-item" href="#">Voluntariado</a></li>
-          </ul>
-        </li>
-
-      </ul>
-
-    </div>
-  </div>
-</nav>
-
-
-    <!-- Main contenido  -->
-
-
-     
-
-                
-
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navNosotros" role="button" data-bs-toggle="dropdown">Nosotros</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="#">Historia</a></li>
+                            <li><a class="dropdown-item" href="#">Nuestro Refugio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Adopta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tienda Solidaria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Visítanos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navOpor" role="button" data-bs-toggle="dropdown">Oportunidades</a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+                            <li><a class="dropdown-item" href="#">Laboral</a></li>
+                            <li><a class="dropdown-item" href="#">Voluntariado</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </section>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container my-5">
+            <h1 class="titulo-dinopatitas text-center mb-5">Formas de ayudar 🐾</h1>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h2 class="h4 card-title mb-3">Hogar temporal</h2>
+                            <p class="card-text flex-grow-1">Si no puedes adoptar, considera ser un hogar temporal.</p>
+                            <button class="btn btn-primary mt-3 w-100">Quiero ser hogar temporal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h2 class="h4 card-title mb-3">Voluntariado</h2>
+                            <p class="card-text flex-grow-1">Tu tiempo y energía son muy valiosos para nuestros dinos</p>
+                            <button class="btn btn-primary mt-3 w-100">Quiero ser voluntario</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h2 class="h4 card-title mb-3">Donaciones</h2>
+                            <p class="card-text flex-grow-1">Alimentos,medicinas, juguetes o aporte es bienvenido.</p>
+                            <button class="btn btn-primary mt-3 w-100">Quiero hacer una donación</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="site-footer py-4 text-center">
         <div class="container">
-            <p>&copy; 2026  Todos los derechos reservados.</p>
+            <p class="mb-0">&copy; 2026 Dinopatitas. Todos los derechos reservados by chikisauria.</p>
         </div>
     </footer>
 
-    <!-- JS -->
-    <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    
-   
-
-
-
-
 </body>
 </html>
