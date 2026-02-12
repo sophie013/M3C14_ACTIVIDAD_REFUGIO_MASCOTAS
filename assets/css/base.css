@@ -1,10 +1,27 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    line-height: 1.6;
+@font-face {
+    font-family: 'CattoPuroo';
+    src: url('../fonts/catto.ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-h1, h2, h3, .titulo-dinopatitas, .navbar-brand {
-    font-family: 'Lora', serif;
-    font-weight: 700;
+:root {
+    --menta-kawaii: #E0F7F4;
+    --rosa-nube: #FFEBEE;
+    --texto-cafe: #5D576B;
+    --verde-agua: #80CBC4;
+    --lavanda-michi: #c4e3e9;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #FBFCFC;
+    color: var(--texto-cafe);
+    overflow-x: hidden;
+}
+
+.font-dinopatitas {
+    font-family: 'CattoPuroo', cursive !important;
+    text-transform: lowercase;
 }

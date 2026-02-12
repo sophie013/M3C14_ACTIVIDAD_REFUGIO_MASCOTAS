@@ -32,11 +32,11 @@ botones para cada uno *
 ----------------------------------------------
 subscripcion de boletin con perritos 
 
--------------------------------------------
+------------------------------------------- 
  foooter
--------------------------------------------
+------------------------------------------- 
 mapa 
-dirección 
+dirección  
 contacto 
 formulario
 equeño formulario 
@@ -60,3 +60,17 @@ https://www.dogstrust.org.uk/
 
  
 https://www.petmatch.cl/
+
+
+
+
+https://anaaweb.org/  proceso de adopcion 
+
+
+Historia 
+dinopatitas 🐶🦕
+En una isla llena de árboles gigantes y portones enormes de madera, había un refugio muy especial llamado Dinopatitas.
+Cuando las puertas se abrían cada mañana, pareciera que ves dinosaurios… pero no, son perritos corriendo con pañuelos de colores y colitas moviéndose sin parar.
+El parque está diseñado como una gran aventura: senderos con huellitas marcadas en el suelo, “zonas salvajes” de juegos y casitas que parecen pequeñas cuevas jurásicas. Los visitantes pueden pasar sin el temor a ser devorados, pero si a que les roben el corazón
+Los “habitantes” del parque, pasean y juegan en los espacios abiertos con sus disfraces de dinosaurios feroces, esperando a la nueva familia que los vendrá a adoptar para llenar de energía una nueva casita jurásica. 
+Te invitamos a llevarte un “rugido” que parece un ladrido, pero no lo es. Son el alma de un dinosaurio travieso que quiere ser parte de tu hogar. 🐾 💚

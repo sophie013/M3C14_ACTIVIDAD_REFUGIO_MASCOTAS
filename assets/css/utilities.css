@@ -1,7 +1,11 @@
-/*.text-center o .mt-2*  arreglos o parches */
+.bg-kawaii { background-color: var(--menta-kawaii); }
+.text-pastel { color: var(--verde-agua) !important; }
 
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-4px); }
+}
 
-
-.text-mint { color: #4db6ac !important; }
-.bg-pastel-soft { background-color: #f1f8f7; }
-.shadow-dino { box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; }
+.font-dinopatitas:hover {
+    animation: bounce 0.5s infinite alternate;
+}

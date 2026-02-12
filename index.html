@@ -10,90 +10,269 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/objects.css">
-    <link rel="stylesheet" href="assets/css/main.css"> <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/main.css"> 
+    <link rel="stylesheet" href="assets/css/utilities.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dino shadow-sm">
-        <div class="container">
-            <a class="navbar-brand brand-center" href="#">Dinopatitas</a>
+<nav class="navbar navbar-expand-lg navbar-dino shadow-sm">
+    <div class="container">
+        <a class="navbar-brand font-dinopatitas" href="index.html">
+            <span class="dino-text">Dino</span><span class="patitas-text">Patitas</span>
+        </a>
 
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="dropdown" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Nosotros
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow" aria-labelledby="navNosotros">
+                        <li><a class="dropdown-item" href="#">Historia</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Adopta</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="tienda.html">Tienda Solidaria</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Visítanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navOpor" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Oportunidades
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end border-0 shadow" aria-labelledby="navOpor">
+                        <li><a class="dropdown-item" href="laboral.html">Laboral</a></li>
+                        <li><a class="dropdown-item" href="voluntariado.html">Voluntariado</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div> </div> </nav>
+<main>
+    <div class="container my-5">
+        <h1 class="titulo-dinopatitas text-center mb-5">Formas de ayudar 🐾</h1>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h2 class="h4 card-title mb-3">Hogar temporal</h2>
+                        <p class="card-text flex-grow-1">Si no puedes adoptar, considera ser un hogar temporal.</p>
+                        <button class="btn btn-primary mt-3 w-100">Quiero ser hogar temporal</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h2 class="h4 card-title mb-3">Voluntariado</h2>
+                        <p class="card-text flex-grow-1">Tu tiempo y energía son muy valiosos para nuestros dinos</p>
+                        <button class="btn btn-primary mt-3 w-100">Quiero ser voluntario</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h2 class="h4 card-title mb-3">Donaciones</h2>
+                        <p class="card-text flex-grow-1">Alimentos,medicinas, juguetes o aporte es bienvenido.</p>
+                        <button class="btn btn-primary mt-3 w-100">Quiero hacer una donación</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<h1>Nuestra historia</h1>
+
+  
+<!--inicio de nuestros dinos en adopción-->
+  <div class="container my-5">
+        <h2 class="text-center mb-4">Historias de Nuestros dinos en adopción 🐾</h2>
+        <div id="perritosCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm card-michi">
+                                <img src="https://i.pinimg.com/736x/9f/77/69/9f776960b5fe247c5cd748caaf53ccd8.jpg" class="card-img-top" alt="Luna">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Luna</h5>
+                                    <div class="michi-tags mb-2">
+                                        <span class="badge badge-cat">Apta Gatos</span>
+                                        <span class="badge badge-kid">Apta Niños</span>
+                                    </div>
+                                    <p class="card-text flex-grow-1">Luna tiene 6 años, llegó tímida y silenciosa, pero descubrió que los abrazos son más fuertes que el miedo.</p>
+                                    <button class="btn btn-primary btn-sm mt-2">Adóptame</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm card-michi">
+                                <img src="https://i.pinimg.com/736x/17/f9/91/17f991633ba35be93d1e62ce56db1cda.jpg" class="card-img-top" alt="Max">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Max</h5>
+                                    <div class="michi-tags mb-2">
+                                        <span class="badge badge-pets">Otras Mascotas</span>
+                                    </div>
+                                    <p class="card-text flex-grow-1">Max es pura energía jurásica a sus 10 meses. Ama correr por el parque y es un romántico total.</p>
+                                    <button class="btn btn-primary btn-sm mt-2">Adóptame</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm card-michi">
+                                <img src="https://i.pinimg.com/1200x/5b/40/b3/5b40b3baddbfa40d570a7351ab1011ae.jpg" class="card-img-top" alt="Chispa">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Chispa</h5>
+                                    <div class="michi-tags mb-2">
+                                        <span class="badge badge-cat">Apta Gatos</span>
+                                        <span class="badge badge-kid">Apta Niños</span>
+                                    </div>
+                                    <p class="card-text flex-grow-1">Pequeña pero valiente, Chispa de 3 años, mueve su colita como si fuera un rugido de amor.</p>
+                                    <button class="btn btn-primary btn-sm mt-2">Adóptame</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm card-michi">
+                                <img src="https://i.pinimg.com/736x/a4/2e/4c/a42e4c17d98fe0b23c34dfbe80c6a03c.jpg" class="card-img-top" alt="Bruno">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Bruno</h5>
+                                    <div class="michi-tags mb-2">
+                                        <span class="badge badge-pets">Otras Mascotas</span>
+                                        <span class="badge badge-kid">Apta Niños</span>
+                                    </div>
+                                    <p class="card-text flex-grow-1">El guardián del parque, el mayor de 9 años. Es muy tranquilo y siempre cuida a los dinos más pequeños.</p>
+                                    <button class="btn btn-primary btn-sm mt-2">Adóptame</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm card-michi">
+                                <img src="https://i.pinimg.com/1200x/46/fc/81/46fc811361363f5ff1739de4dde69a37.jpg" class="card-img-top" alt="Nala">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Nala</h5>
+                                    <div class="michi-tags mb-2">
+                                        <span class="badge badge-cat">Apta Gatos</span>
+                                    </div>
+                                    <p class="card-text flex-grow-1">Nala adora las siestas al sol y los mimos infinitos. Con 3 añitos solo busca seguridad y amor.</p>
+                                    <button class="btn btn-primary btn-sm mt-2">Adóptame</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm card-michi">
+                                <img src="https://i.pinimg.com/1200x/61/7a/03/617a032c91678c37343209bb6bef2f6d.jpg" class="card-img-top" alt="Rocky">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Rocky</h5>
+                                    <div class="michi-tags mb-2">
+                                        <span class="badge badge-kid">Apta Niños</span>
+                                        <span class="badge badge-pets">Otras Mascotas</span>
+                                    </div>
+                                    <p class="card-text flex-grow-1">Rocky tiene una mirada que derrite corazones. Con 6 meses y una energía infinita, es el mejor compañero de aventuras.</p>
+                                    <button class="btn btn-primary btn-sm mt-2">Adóptame</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#perritosCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
             </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#perritosCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+            </button>
+        </div>
+    </div>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto text-center">
-                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navNosotros" role="button" data-bs-toggle="dropdown">Nosotros</a>
-                        <ul class="dropdown-menu border-0 shadow">
-                            <li><a class="dropdown-item" href="#">Historia</a></li>
-                            <li><a class="dropdown-item" href="#">Nuestro Refugio</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Adopta</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tienda Solidaria</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Visítanos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navOpor" role="button" data-bs-toggle="dropdown">Oportunidades</a>
-                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
-                            <li><a class="dropdown-item" href="#">Laboral</a></li>
-                            <li><a class="dropdown-item" href="#">Voluntariado</a></li>
-                        </ul>
-                    </li>
+
+<h1>Proceso de adopcion</h1>
+
+
+</main>
+    <!--fin de nuestros dinos en adopción-->
+    
+</main>
+
+<footer class="site-footer mt-5">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <a class="navbar-brand font-dinopatitas" href="#">
+                    <span class="dino-text">Dino</span><span class="patitas-text">Patitas</span>
+                </a>
+                <p class="small text-muted">Refugio dedicado al rescate y adopción de "dinos" en la Región de Valparaíso, Chile.</p>
+                <div class="social-links">
+                    <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h6 class="fw-bold mb-3">Nosotros</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Equipo Dinopatitas</a></li>
+                    <li><a href="#">conoce la ley cholito</a></li>
+                    <li><a href="#">Contribuye</a></li>
+                    
                 </ul>
             </div>
-        </div>
-    </nav>
-
-    <main>
-        <div class="container my-5">
-            <h1 class="titulo-dinopatitas text-center mb-5">Formas de ayudar 🐾</h1>
-
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center d-flex flex-column">
-                            <h2 class="h4 card-title mb-3">Hogar temporal</h2>
-                            <p class="card-text flex-grow-1">Si no puedes adoptar, considera ser un hogar temporal.</p>
-                            <button class="btn btn-primary mt-3 w-100">Quiero ser hogar temporal</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center d-flex flex-column">
-                            <h2 class="h4 card-title mb-3">Voluntariado</h2>
-                            <p class="card-text flex-grow-1">Tu tiempo y energía son muy valiosos para nuestros dinos</p>
-                            <button class="btn btn-primary mt-3 w-100">Quiero ser voluntario</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center d-flex flex-column">
-                            <h2 class="h4 card-title mb-3">Donaciones</h2>
-                            <p class="card-text flex-grow-1">Alimentos,medicinas, juguetes o aporte es bienvenido.</p>
-                            <button class="btn btn-primary mt-3 w-100">Quiero hacer una donación</button>
-                        </div>
-                    </div>
+            <div class="col-lg-3 col-md-6">
+                <h6 class="fw-bold mb-3">Comunidad</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Refugios Amigos</a></li>
+                    <li><a href="#">Postula tu Fundación</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h6 class="fw-bold mb-3">Visítanos</h6>
+                <ul class="list-unstyled footer-info mb-3">
+                    <li><i class="bi bi-geo-alt-fill me-2"></i>Calle Ficticia 123, Viña del Mar, Chile.</li>
+                    <li><i class="bi bi-telephone-fill me-2"></i>+56 9 1234 5678</li>
+                </ul>
+                <div class="map-container rounded shadow-sm overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.823456789!2d-71.5518!3d-33.0245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e0c123456789%3A0x1234567890abcdef!2zVm屋外fGEgZGVsIE1hciwgVmFscGFyYcOtc28sIENoaWxl!5e0!3m2!1ses!2scl!4v1700000000000!5m2!1ses!2scl" width="100%" height="150" style="border:0;" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
-    </main>
-
-    <footer class="site-footer py-4 text-center">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 Dinopatitas. Todos los derechos reservados by chikisauria.</p>
+        <hr class="my-4 text-muted">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="small mb-0">© 2026 Dinopatitas. by ©chikisaurias malvadas y asociadas© </p>
+            </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
