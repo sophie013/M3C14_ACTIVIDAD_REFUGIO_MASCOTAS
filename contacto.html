@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Dinopatitas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/objects.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dino shadow-sm">
+        <div class="container">
+            <a class="navbar-brand font-dinopatitas" href="index.html">
+                <span class="dino-text">Dino</span><span class="patitas-text">Patitas</span>
+            </a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">Nosotros</a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="navNosotros">
+                            <li><a class="dropdown-item" href="#">Historia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Adopta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda Solidaria</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navOpor" role="button" data-bs-toggle="dropdown" aria-expanded="false">Oportunidades</a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow" aria-labelledby="navOpor">
+                            <li><a class="dropdown-item" href="laboral.html">Laboral</a></li>
+                            <li><a class="dropdown-item" href="voluntariado.html">Voluntariado</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-construccion">
+        <img src="assets/img/perrito_construccion.jpg" alt="Cachorros constructores de Dinopatitas">
+    </div>
+
+    <main class="container my-5">
+        <div class="text-center mb-5">
+            <h1 class="font-dinopatitas">¡Ponte en contacto con el Dino-Equipo! 🦖</h1>
+            <p>¿Tienes dudas, sugerencias o quieres ayudar? Escríbenos y te responderemos lo antes posible.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm p-4">
+                    <form action="#" class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-6">
+                            <label for="nombre" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ej: Juan Pérez" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="nombre@correo.com" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="asunto" class="form-label">Asunto</label>
+                            <select class="form-select" id="asunto" required>
+                                <option selected disabled value="">Selecciona una opción...</option>
+                                <option>Información sobre Adopción</option>
+                                <option>Voluntariado</option>
+                                <option>Donaciones</option>
+                                <option>Tienda Solidaria</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="mensaje" class="form-label">Tu Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="5" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
+                        </div>
+                        <div class="col-12 text-center mt-4">
+                            <button class="btn btn-primary px-5 py-2" type="submit" style="background-color: #6c5ce7; border: none; border-radius: 20px;">
+                                Enviar Mensaje
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer mt-5">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <a class="navbar-brand font-dinopatitas" href="#">
+                        <span class="dino-text">Dino</span><span class="patitas-text">Patitas</span>
+                    </a>
+                    <p class="small text-muted">Refugio dedicado al rescate y adopción de "dinos" en la Región de Valparaíso, Chile.</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Visítanos</h6>
+                    <ul class="list-unstyled footer-info mb-3">
+                        <li><i class="bi bi-geo-alt-fill me-2"></i>Calle Ficticia 123, Viña del Mar, Chile.</li>
+                    </ul>
+                    <div class="map-container rounded shadow-sm overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.8256338426!2d-71.5518!3d-33.0245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDAxJzI4LjIiUyA3McKwMzMnMDYuNSJX!5e0!3m2!1ses!2scl!4v1700000000000!5m2!1ses!2scl" width="100%" height="150" style="border:0;" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 text-muted">
+            <p class="small mb-0 text-center">© 2026 Dinopatitas. by ©chikisaurias malvadas y asociadas©</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script de Bootstrap para validación de formularios
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+</html>

@@ -3,41 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Solidaria 🛒 | Dinopatitas</title>
+    <title>Tienda Solidaria | Dinopatitas 🛒</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/objects.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    
+    <style>
+        .btn-fav { color: #e0e0e0; cursor: pointer; transition: 0.3s; font-size: 1.5rem; }
+        .btn-fav.active { color: #ff4757 !important; }
+        .card-product { border-radius: 20px; transition: 0.3s; overflow: hidden; }
+        .card-product:hover { transform: translateY(-8px); }
+        .toast-container { z-index: 2055; }
+        .border-pastel { border: 2px solid #f0f0f0; }
+    </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dino shadow-sm sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dino shadow-sm sticky-top bg-white">
     <div class="container">
         <a class="navbar-brand font-dinopatitas" href="index.html">
             <span class="dino-text">Dino</span><span class="patitas-text">Patitas</span>
         </a>
 
-        <form class="d-flex mx-auto d-none d-lg-flex" style="width: 40%;">
-            <input class="form-control me-2 rounded-pill border-pastel" type="search" placeholder="Buscar disfraces..." aria-label="Search">
-            <button class="btn btn-primary rounded-circle" type="submit"><i class="bi bi-search"></i></button>
-        </form>
+        <div class="d-flex mx-auto d-none d-lg-flex" style="width: 30%;">
+            <div class="input-group">
+                <input id="mainSearch" class="form-control rounded-start-pill border-pastel" type="search" placeholder="¿Qué buscas?">
+                <button class="btn btn-primary rounded-end-pill" onclick="ejecutarBusqueda()"><i class="bi bi-search"></i></button>
+            </div>
+        </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-center">
+            <ul class="navbar-nav ms-auto text-center align-items-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link active" href="tienda.html">Tienda</a></li>
-                <li class="nav-item ms-lg-3">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navOpor" role="button" data-bs-toggle="dropdown">Oportunidades</a>
+                    <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+                        <li><a class="dropdown-item" href="laboral.html">Laboral</a></li>
+                        <li><a class="dropdown-item" href="voluntariado.html">Voluntariado</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item ms-lg-2">
                     <button class="btn btn-outline-primary rounded-pill position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
                         <i class="bi bi-cart3"></i>
-                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        <span id="cart-count" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">0</span>
                     </button>
                 </li>
             </ul>
@@ -45,100 +62,169 @@
     </div>
 </nav>
 
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast align-items-center text-white border-0" role="alert">
+        <div class="d-flex">
+            <div class="toast-body" id="toastMessage"></div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+
 <main class="container my-5">
     <header class="text-center mb-5">
-        <h1 class="font-dinopatitas display-4">Tienda de Disfraces 🦖</h1>
-        <p class="text-muted">Todos los tamaños y colores. ¡Viste a tu dino con estilo!</p>
+        <h1 class="font-dinopatitas display-4">Dino Disfraces 🦖</h1>
+        <p class="text-muted">¡Vuelve a la prehistoria con estilo y ayuda a nuestros Dinos!</p>
     </header>
-
-    <div id="tiendaCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
-        <div class="carousel-inner rounded-4 shadow-sm">
-            <div class="carousel-item active">
-                <img src="https://i.pinimg.com/1200x/2a/3e/26/2a3e26487e834641d440f368944510b0.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Disfraz Dino">
-                <div class="carousel-caption d-none d-md-block bg-dark-subtle rounded-3">
-                    <h3>Colección Jurásica</h3>
-                    <p>Disfraces de Triceratops y T-Rex en todos los colores.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://i.pinimg.com/1200x/15/63/0e/15630eb5a6907727e1f486447e17006a.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Disfraz Fantasía">
-                <div class="carousel-caption d-none d-md-block bg-dark-subtle rounded-3">
-                    <h3>Héroes y Villanos</h3>
-                    <p>Para los perritos más valientes del refugio.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#tiendaCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#tiendaCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
 
     <div class="row g-4">
         <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 card-michi border-0 shadow-sm">
-                <img src="https://i.pinimg.com/736x/21/82/72/2182725e227092147372337d6e42661d.jpg" class="card-img-top" alt="Disfraz Verde">
+            <div class="card h-100 card-product border-0 shadow-sm">
+                <div class="position-relative">
+                    <img src="https://i.pinimg.com/736x/23/e3/bf/23e3bff4d1c30bf41a8610c8b1abb807.jpg" class="card-img-top" alt="Disfraz Verde">
+                    <div class="position-absolute top-0 end-0 p-2">
+                        <i class="bi bi-hdd-fill btn-fav" onclick="toggleFav(this)"></i>
+                    </div>
+                </div>
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title h6">Disfraz Dino-Verde</h5>
                     <p class="text-primary fw-bold mb-1">$15.990</p>
-                    <small class="text-muted mb-3">Tallas: S, M, L, XL</small>
-                    <button class="btn btn-primary btn-sm mt-auto add-to-cart" data-name="Disfraz Dino-Verde" data-price="15990">Agregar</button>
+                    <small class="text-muted mb-3">Tallas: S, M, L, XL <br> Mat: Polar Antialérgico</small>
+                    <button class="btn btn-primary btn-sm mt-auto" onclick="addToCart('Disfraz Dino-Verde', 15990)">Agregar</button>
                 </div>
             </div>
         </div>
+
         <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 card-michi border-0 shadow-sm">
-                <img src="https://i.pinimg.com/736x/80/7e/4e/807e4e0471c08d1797828731d77a898a.jpg" class="card-img-top" alt="Disfraz Rosa">
+            <div class="card h-100 card-product border-0 shadow-sm">
+                <div class="position-relative">
+                    <img src="https://www.rover.com/blog/wp-content/uploads/2020/08/41f60f1AYL.jpg?odnHeight=117&odnWidth=117&odnBg=FFFFFF" class="card-img-top" alt="Disfraz Rosa">
+                    <div class="position-absolute top-0 end-0 p-2">
+                        <i class="bi bi-hdd-fill btn-fav" onclick="toggleFav(this)"></i>
+                    </div>
+                </div>
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title h6">Dino-Rosa Pastel</h5>
                     <p class="text-primary fw-bold mb-1">$14.500</p>
-                    <small class="text-muted mb-3">Tallas: XS, S, M</small>
-                    <button class="btn btn-primary btn-sm mt-auto add-to-cart" data-name="Dino-Rosa Pastel" data-price="14500">Agregar</button>
+                    <small class="text-muted mb-3">Tallas: XS, S, M <br> Mat: Algodón Pima</small>
+                    <button class="btn btn-primary btn-sm mt-auto" onclick="addToCart('Dino-Rosa Pastel', 14500)">Agregar</button>
                 </div>
             </div>
         </div>
+
         <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 card-michi border-0 shadow-sm">
-                <img src="https://i.pinimg.com/736x/77/81/81/7781816e866a815a5f111394b3c79c83.jpg" class="card-img-top" alt="Disfraz Azul">
+            <div class="card h-100 card-product border-0 shadow-sm">
+                <div class="position-relative">
+                    <img src="https://m.media-amazon.com/images/I/71MZa-Vx-6L._AC_SL1500_.jpg" class="card-img-top" alt="Disfraz Azul">
+                    <div class="position-absolute top-0 end-0 p-2">
+                        <i class="bi bi-hdd-fill btn-fav" onclick="toggleFav(this)"></i>
+                    </div>
+                </div>
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title h6">Dragón de Mar Azul</h5>
                     <p class="text-primary fw-bold mb-1">$18.000</p>
-                    <small class="text-muted mb-3">Tallas: M, L, XL</small>
-                    <button class="btn btn-primary btn-sm mt-auto add-to-cart" data-name="Dragón de Mar Azul" data-price="18000">Agregar</button>
+                    <small class="text-muted mb-3">Tallas: M, L, XL <br> Mat: Tela Térmica</small>
+                    <button class="btn btn-primary btn-sm mt-auto" onclick="addToCart('Dragón de Mar Azul', 18000)">Agregar</button>
                 </div>
             </div>
         </div>
+
         <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 card-michi border-0 shadow-sm">
-                <img src="https://i.pinimg.com/736x/43/66/6a/43666aa8d102e3b3e8e453965555021c.jpg" class="card-img-top" alt="Disfraz Amarillo">
+            <div class="card h-100 card-product border-0 shadow-sm">
+                <div class="position-relative">
+                    <img src="https://photos-us.bazaarvoice.com/photo/2/cGhvdG86bXJjaGV3eQ/6963a43f-1dae-50a1-b124-70e224a4d1db" class="card-img-top" alt="Disfraz Amarillo">
+                    <div class="position-absolute top-0 end-0 p-2">
+                        <i class="bi bi-hdd-fill btn-fav" onclick="toggleFav(this)"></i>
+                    </div>
+                </div>
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title h6">T-Rex Amarillo Sol</h5>
                     <p class="text-primary fw-bold mb-1">$15.990</p>
-                    <small class="text-muted mb-3">Tallas: Todas</small>
-                    <button class="btn btn-primary btn-sm mt-auto add-to-cart" data-name="T-Rex Amarillo Sol" data-price="15990">Agregar</button>
+                    <small class="text-muted mb-3">Tallas: Todas <br> Mat: Micropolar Soft</small>
+                    <button class="btn btn-primary btn-sm mt-auto" onclick="addToCart('T-Rex Amarillo Sol', 15990)">Agregar</button>
                 </div>
             </div>
         </div>
     </div>
 </main>
 
-<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content rounded-4 border-0">
-            <div class="modal-header bg-kawaii">
-                <h5 class="modal-title font-dinopatitas">Tu Carrito 🛒</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal fade" id="cartModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header">
+                <h5 class="modal-title font-dinopatitas">Tu Dino-Carrito 🛒</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <ul id="cart-list" class="list-group list-group-flush mb-3">
-                    </ul>
-                <div class="d-flex justify-content-between fw-bold border-top pt-3">
-                    <span>Total:</span>
-                    <span id="cart-total">$0</span>
+                <ul id="cart-list" class="list-group list-group-flush"></ul>
+                <div class="d-flex justify-content-between fw-bold mt-3 p-3 bg-light rounded">
+                    <span>Total:</span> <span id="cart-total">$0</span>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Seguir mirando</button>
-                <button type="button" class="btn btn-
+            <div class="modal-footer border-0">
+                <button class="btn btn-success w-100 rounded-pill py-2" onclick="irAPagar()">Pagar con Webpay <i class="bi bi-credit-card ms-1"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    let cart = [];
+
+    function mostrarToast(txt, color) {
+        const t = document.getElementById('liveToast');
+        document.getElementById('toastMessage').innerText = txt;
+        t.className = `toast align-items-center text-white border-0 ${color}`;
+        new bootstrap.Toast(t).show();
+    }
+
+    function addToCart(name, price) {
+        const item = cart.find(i => i.name === name);
+        if(item) { item.qty++; } else { cart.push({name, price, qty: 1}); }
+        mostrarToast(`¡${name} agregado! 🦖`, 'bg-success');
+        updateUI();
+    }
+
+    function removeProduct(name) {
+        cart = cart.filter(i => i.name !== name);
+        mostrarToast('Producto eliminado', 'bg-danger');
+        updateUI();
+    }
+
+    function updateUI() {
+        const list = document.getElementById('cart-list');
+        let sum = 0, totalItems = 0;
+        list.innerHTML = cart.length === 0 ? '<p class="text-center">Carrito vacío</p>' : '';
+        
+        cart.forEach(i => {
+            sum += i.price * i.qty;
+            totalItems += i.qty;
+            list.innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0">
+                <div><strong>${i.name}</strong> <span class="badge bg-primary ms-1">x${i.qty}</span><br><small>$${(i.price * i.qty).toLocaleString()}</small></div>
+                <button class="btn btn-sm text-danger" onclick="removeProduct('${i.name}')"><i class="bi bi-trash3"></i></button>
+            </li>`;
+        });
+        document.getElementById('cart-count').innerText = totalItems;
+        document.getElementById('cart-total').innerText = `$${sum.toLocaleString()}`;
+    }
+
+    function toggleFav(el) { el.classList.toggle('active'); }
+
+    function ejecutarBusqueda() {
+        const q = document.getElementById('mainSearch').value.toLowerCase().trim();
+        const rutas = {'inicio':'index.html', 'tienda':'tienda.html', 'laboral':'laboral.html', 'voluntariado':'voluntariado.html', 'contacto':'contacto.html'};
+        if(rutas[q]) { 
+            mostrarToast(`Rastreando ${q}...`, 'bg-info');
+            setTimeout(() => window.location.href = rutas[q], 1000);
+        } else { mostrarToast('Dino-error: Sección no encontrada', 'bg-warning'); }
+    }
+
+    function irAPagar() {
+        if(cart.length === 0) return mostrarToast('Carrito vacío', 'bg-warning');
+        mostrarToast('Redirigiendo a zona segura...', 'bg-primary');
+        setTimeout(() => window.location.href = 'https://www.transbank.cl', 1500);
+    }
+</script>
+</body>
+</html>
