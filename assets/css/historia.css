@@ -1,0 +1,86 @@
+/* =========================
+   HISTORIA DINOPATITAS (AISLADO)
+   Evita que otros CSS lo pisen
+========================= */
+
+/* Variables SOLO para la sección historia */
+.historia-section {
+    --dino-green: #7eb09b;
+    --dino-dark-green: #4a7c68;
+    --dino-cream: #f9fbf9;
+    --dino-accent: #ffb347;
+    --font-main: 'Lora', serif;
+
+    background-color: var(--dino-cream);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contenido de historia */
+.historia-section .historia-content {
+    background: #ffffff;
+    border-left: 5px solid var(--dino-green);
+    font-family: var(--font-main);
+    transition: all 0.3s ease;
+}
+
+/* TÍTULO SOLO dentro de historia (no global) */
+.historia-section .titulo-dinopatitas {
+    color: var(--dino-dark-green);
+    font-weight: 700;
+}
+
+/* Quote jurásico */
+.historia-section .quote-jurasico {
+    background-color: #e8f5e9;
+    padding: 1.5rem;
+    border-radius: 15px;
+    font-style: italic;
+    color: var(--dino-dark-green);
+    position: relative;
+    margin-top: 20px;
+    border: 1px solid rgba(126, 176, 155, 0.3);
+}
+
+/* Imagen wrapper */
+.historia-section .historia-img-wrapper {
+    position: relative;
+    padding: 20px;
+}
+
+/* Imagen */
+.historia-section .historia-img-wrapper img {
+    border: 8px solid #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover suave */
+.historia-section .historia-img-wrapper:hover img {
+    transform: rotate(-2deg) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Huellita decorativa */
+.historia-section .huellita-decorativa {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    font-size: 3rem;
+    opacity: 0.2;
+    transform: rotate(20deg);
+    pointer-events: none;
+}
+
+/* IMPORTANTE: Botones SOLO dentro de historia */
+.historia-section .btn-primary {
+    background-color: var(--dino-green);
+    border-color: var(--dino-green);
+    border-radius: 25px;
+    padding: 10px 25px;
+}
+
+.historia-section .btn-primary:hover {
+    background-color: var(--dino-dark-green);
+    border-color: var(--dino-dark-green);
+}

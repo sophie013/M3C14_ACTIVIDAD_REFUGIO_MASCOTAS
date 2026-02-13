@@ -95,3 +95,90 @@
     background-color: var(--lavanda-michi);
     font-size: 0.9rem;
 }
+
+
+
+/*hero perrito*/
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+
+    /* USA ESTA RUTA PARA SALIR DE LA CARPETA CSS */
+    background-image: url("https://res.cloudinary.com/dj0cbwsvk/image/upload/v1771017745/hero_dog_f1gene.jpg");
+
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+}
+
+/* Capa suave pastel para que el texto se lea */
+.hero-overlay {
+    width: 100%;
+    min-height: 90vh;
+    background: linear-gradient(
+        90deg,
+        rgba(122, 190, 185, 0.85) 0%,
+        rgba(122, 190, 185, 0.6) 40%,
+        rgba(255, 255, 255, 0) 70%
+    );
+    display: flex;
+    align-items: center;
+}
+
+/* Contenido */
+.hero-content {
+    color: white;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+/* Títulos */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Botones bonitos */
+.btn-hero {
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Botón principal pastel */
+.btn-primary.btn-hero {
+    background-color: #ffb6c1; /* rosita suave */
+    border: none;
+}
+
+.btn-primary.btn-hero:hover {
+    background-color: #ffa3b3;
+    transform: translateY(-2px);
+}
+
+/* Botón secundario */
+.btn-outline-light.btn-hero:hover {
+    background-color: white;
+    color: #7abebb;
+    transform: translateY(-2px);
+}
+ 
+
+/*fin hero perrito*/
