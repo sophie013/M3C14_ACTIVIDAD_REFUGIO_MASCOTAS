@@ -156,3 +156,65 @@
     margin-top: 2rem;
 }
 
+
+
+
+
+/* --- Estilos para zona de ayuda*/
+/* =========================================
+   SECCIÓN: FORMAS DE DINO AYUDAR 🐾
+   ========================================= */
+/* Estilos para las Dino-Cards */
+.dino-ayudar-section {
+    background-color: #f1faf7; /* Fondo sutil para que resalten las cards */
+}
+
+.dino-card {
+    border-radius: 30px !important;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent !important;
+}
+
+.dino-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+    border-color: #ffb6c1 !important; /* Borde rosita al pasar el mouse */
+}
+
+.dino-img-container {
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dino-img-container img {
+    max-width: 180px; /* Tamaño controlado de la ilustración */
+    height: auto;
+    border-radius: 20px;
+}
+
+.btn-dino-action {
+    background-color: #7abebb !important; /* Tu color menta */
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-dino-action:hover {
+    background-color: #ffb6c1 !important; /* Cambia a rosita al hacer hover */
+    color: white !important;
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #4a7c68 !important; /* Verde oscuro para legibilidad */
+    font-family: 'Lora', serif;
+}
+
+
+/*fin de zona de ayuda */ 

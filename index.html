@@ -12,12 +12,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/objects.css">
-    <link rel="stylesheet" href="assets/css/main.css"> 
-    <link rel="stylesheet" href="assets/css/utilities.css">
-    <link rel="stylesheet" href="assets/css/historia.css">
+   <link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/objects.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<link rel="stylesheet" href="assets/css/historia.css">
 
 </head>
 <body>
@@ -105,42 +105,56 @@
 
 
 
-<main>
-    <div class="container my-5">
-        <h1 class="titulo-dinopatitas text-center mb-5">formas de Dino Ayudar 🐾</h1>
+<section class="dino-ayudar-section py-5">
+    <div class="container">
+        <h1 class="titulo-dinopatitas text-center mb-5">Formas de Dino Ayudar 🐾</h1>
+        
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
+                <div class="card dino-card h-100 shadow-sm border-0">
+                    <div class="dino-img-container">
+                        <img src="https://headsupfortails.com/cdn/shop/articles/family-friendly-dog-breeds.jpg?v=1753786653" class="card-img-top" alt="Hogar temporal">
+                    </div>
                     <div class="card-body text-center d-flex flex-column">
                         <h2 class="h4 card-title mb-3">Hogar temporal</h2>
-                        <p class="card-text flex-grow-1">Si no puedes adoptar, considera ser un hogar temporal.</p>
-                        <button class="btn btn-primary mt-3 w-100">Quiero ser hogar temporal</button>
+                        <p class="card-text flex-grow-1">Brinda un refugio seguro y amoroso a un dino mientras espera a su familia definitiva.</p>
+                        <button class="btn btn-primary btn-dino-action mt-3 w-100">Quiero ser hogar temporal</button>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
+                <div class="card dino-card h-100 shadow-sm border-0">
+                    <div class="dino-img-container">
+                        <img src="https://www.putnamservicedogs.org/wp-content/uploads/2022/01/volunteer.jpg" class="card-img-top" alt="Voluntariado">
+                    </div>
                     <div class="card-body text-center d-flex flex-column">
                         <h2 class="h4 card-title mb-3">Voluntariado</h2>
-                        <p class="card-text flex-grow-1">Tu tiempo y energía son muy valiosos para nuestros dinos</p>
-                        <button class="btn btn-primary mt-3 w-100">Quiero ser voluntario</button>
+                        <p class="card-text flex-grow-1">Tu tiempo es oro. Ayúdanos en paseos, limpieza o eventos especiales del refugio.</p>
+                        <button class="btn btn-primary btn-dino-action mt-3 w-100">Quiero ser voluntario</button>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
+                <div class="card dino-card h-100 shadow-sm border-0">
+                    <div class="dino-img-container">
+                        <img src="https://schertzanimalhospital.com/wp-content/uploads/2019/04/iStock-914802708-1.webp" class="card-img-top" alt="Donaciones">
+                    </div>
                     <div class="card-body text-center d-flex flex-column">
                         <h2 class="h4 card-title mb-3">Donaciones</h2>
-                        <p class="card-text flex-grow-1">Alimentos,medicinas, juguetes o aporte es bienvenido.</p>
-                        <button class="btn btn-primary mt-3 w-100">Quiero hacer una donación</button>
+                        <p class="card-text flex-grow-1">Alimentos, medicinas o aportes económicos. ¡Todo granito de arena cuenta muchísimo!</p>
+                        <button class="btn btn-primary btn-dino-action mt-3 w-100">Quiero donar</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
 
-<section class="historia-section py-5">
+
+<section id="historia" class="historia-section">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
@@ -282,7 +296,7 @@
                     <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&q=80&w=200" alt="Vienes a verme">
                 </div>
                 <h3 class="h5 mt-3 fw-bold">Vienes a verme</h3>
-                <p class="small"> si  ¡me llevas a casa!</p>
+                <p class="small"> si hay feeling ¡me llevas a casa!</p>
             </div>
 
             <div class="col-6 col-md-3 paso-item">
@@ -290,7 +304,7 @@
                     <img src="https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/61d1e1af-c414-4c21-838b-2f32569d5ec4/dog-owner-and-doctor-shake-hands.png?w=1920&q=75&auto=format" alt="Documentamos">
                 </div>
                 <h3 class="h5 mt-3 fw-bold">Documentamos</h3>
-                <p class="small">la adopción y realizamos las consultas veterinarias e inscripcion </p>
+                <p class="small"> oficialmente tuyo, terminamos con las consultas veterinarias e inscripcion </p>
             </div>
 
             <div class="col-6 col-md-3 paso-item">
@@ -369,6 +383,7 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
