@@ -12,15 +12,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-   <link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/objects.css">
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/utilities.css">
-<link rel="stylesheet" href="assets/css/historia.css">
+     <link rel="stylesheet" href="assets/css/base/base.css">
+    <link rel="stylesheet" href="assets/css/layout/layout.css">
+    <link rel="stylesheet" href="assets/css/modules/objects.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/base/utilities.css">
 
-</head>
-<body>
+<!--css separado por pages--->
+    <link rel="stylesheet" href="assets/css/modules/historia.css">
+    <link rel="stylesheet" href="assets/css/modules/voluntariado.css">
+    <link rel="stylesheet" href="assets/css/modules/tienda.css">
+    <link rel="stylesheet" href="assets/css/modules/contacto.css">
+    <link rel="stylesheet" href="assets/css/modules/laboral.css">
+    <link rel="stylesheet" href="assets/css/modules/index.css">
+    </head> 
+    <body>
 
 <nav class="navbar navbar-expand-lg navbar-dino shadow-sm">
     <div class="container">
@@ -46,14 +52,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Inicio</a>
                 </li>
-                <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="navNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">Nosotros
-                     </a>
-           <ul class="dropdown-menu border-0 shadow" aria-labelledby="navNosotros">
-                <li><a class="dropdown-item" href="#historia">Historia</a></li></ul>
-               </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Adopta</a>
+
+      <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle" href="#" id="navNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">Nosotros</a>
+     <ul class="dropdown-menu border-0 shadow" aria-labelledby="navNosotros">
+        <li><a class="dropdown-item" href="#historia">Historia</a></li>
+     </ul>
+</li>
+              <li class="nav-item">
+            <a class="nav-link" href="index.html#perritosCarousel">Adopta</a>
                 </li>
                 
                 <li class="nav-item">
@@ -77,36 +84,27 @@
         </div> </div> </nav>
 
 <section class="hero-section">
-    <div class="hero-overlay">
-        <div class="container hero-content">
-            <h1 class="hero-title">
-                Un hogar temporal lleno de amor para nuestros Dinos 
-            </h1>
-
-            <p class="hero-subtitle">
-                Ayuda a nuestros Dinos a encontrar una familia para siempre 
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#adopta" class="btn btn-primary btn-hero">
-                        Adoptar
-                </a>
-
-                <a href="#voluntariado" class="btn btn-outline-light btn-hero">
-                     Ser voluntario
-                </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6"> <div class="hero-content">
+                    <h1 class="hero-title">Un hogar temporal lleno de amor para nuestros Dinos</h1>
+                    <p class="hero-subtitle">Ayuda a nuestros Dinos a encontrar una familia para siempre</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#adoptar" class="btn btn-primary btn-hero">Adoptar</a>
+                        <a href="#voluntariado" class="btn btn-outline-light btn-hero">Ser voluntario</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-
-
 <section class="dino-ayudar-section py-5">
     <div class="container">
         <h1 class="titulo-dinopatitas text-center mb-5">Formas de Dino Ayudar 🐾</h1>
         
-        <div class="row g-4">
+       <div class="row g-4">
             <div class="col-md-4">
                 <div class="card dino-card h-100 shadow-sm border-0">
                     <div class="dino-img-container">
@@ -114,6 +112,7 @@
                     </div>
                     <div class="card-body text-center d-flex flex-column">
                         <h2 class="h4 card-title mb-3">Hogar temporal</h2>
+                  
                         <p class="card-text flex-grow-1">Brinda un refugio seguro y amoroso a un dino mientras espera a su familia definitiva.</p>
                         <button class="btn btn-primary btn-dino-action mt-3 w-100">Quiero ser hogar temporal</button>
                     </div>
@@ -185,41 +184,59 @@
                     <div class="row g-4">
                         <div class="col-md-4">
                             <div class="card h-100 shadow-sm card-michi">
-                                <img src="https://i.pinimg.com/736x/9f/77/69/9f776960b5fe247c5cd748caaf53ccd8.jpg" class="card-img-top" alt="Luna">
+                                <div class="img-wrapper">
+                                    <img src="assets/img/rocky_perrito.jpeg" class="card-img-top" alt="Luna">
+                                </div>
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Luna</h5>
-                                    <div class="michi-tags mb-2">
-                                        <span class="badge badge-cat">Apta Gatos</span>
-                                        <span class="badge badge-kid">Apta Niños</span>
+                                    
+                                    <div class="dino-specs">
+                                        <span class="spec-badge spec-age">Edad: 6 años</span>
+                                        <span class="spec-badge spec-allergy">Alergias: Ninguna</span>
+                                        <span class="spec-badge spec-compat">Convivencia: Gatos</span>
+                                        <span class="spec-badge spec-compat">Convivencia: Niños</span>
                                     </div>
-                                    <p class="card-text flex-grow-1">Luna tiene 6 años, llegó tímida y silenciosa, pero descubrió que los abrazos son más fuertes que el miedo.</p>
+
+                                    <p class="card-text flex-grow-1 mt-2">Luna llegó tímida y silenciosa, pero descubrió que los abrazos son más fuertes que el miedo.</p>
                                     <button class="btn btn-primary btn-sm mt-2">Adóptame</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card h-100 shadow-sm card-michi">
-                                <img src="https://i.pinimg.com/736x/17/f9/91/17f991633ba35be93d1e62ce56db1cda.jpg" class="card-img-top" alt="Max">
+                                <div class="img-wrapper">
+                                    <img src="assets/img/max_dino.jpg" class="card-img-top" alt="Max">
+                                </div>
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Max</h5>
-                                    <div class="michi-tags mb-2">
-                                        <span class="badge badge-pets">Otras Mascotas</span>
+                                    
+                                    <div class="dino-specs">
+                                        <span class="spec-badge spec-age">Edad: 10 meses</span>
+                                        <span class="spec-badge spec-allergy">Alergias: Pollo</span>
+                                        <span class="spec-badge spec-compat">Convivencia: Otras Masc.</span>
                                     </div>
-                                    <p class="card-text flex-grow-1">Max es pura energía jurásica a sus 10 meses. Ama correr por el parque y es un romántico total.</p>
+
+                                    <p class="card-text flex-grow-1 mt-2">Max es pura energía jurásica. Ama correr por el parque y es un romántico total.</p>
                                     <button class="btn btn-primary btn-sm mt-2">Adóptame</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card h-100 shadow-sm card-michi">
-                                <img src="https://i.pinimg.com/1200x/5b/40/b3/5b40b3baddbfa40d570a7351ab1011ae.jpg" class="card-img-top" alt="Chispa">
+                                <div class="img-wrapper">
+                                    <img src="assets/img/chispa_dino.jpg" class="card-img-top" alt="Chispa">
+                                </div>
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Chispa</h5>
-                                    <div class="michi-tags mb-2">
-                                        <span class="badge badge-cat">Apta Gatos</span>
-                                        <span class="badge badge-kid">Apta Niños</span>
+                                    
+                                    <div class="dino-specs">
+                                        <span class="spec-badge spec-age">Edad: 3 años</span>
+                                        <span class="spec-badge spec-allergy">Alergias: Ninguna</span>
+                                        <span class="spec-badge spec-compat">Convivencia: Gatos</span>
+                                        <span class="spec-badge spec-compat">Convivencia: Niños</span>
                                     </div>
-                                    <p class="card-text flex-grow-1">Pequeña pero valiente, Chispa de 3 años, mueve su colita como si fuera un rugido de amor.</p>
+
+                                    <p class="card-text flex-grow-1 mt-2">Pequeña pero valiente, Chispa mueve su colita como si fuera un rugido de amor.</p>
                                     <button class="btn btn-primary btn-sm mt-2">Adóptame</button>
                                 </div>
                             </div>
@@ -230,41 +247,59 @@
                     <div class="row g-4">
                         <div class="col-md-4">
                             <div class="card h-100 shadow-sm card-michi">
-                                <img src="https://i.pinimg.com/736x/a4/2e/4c/a42e4c17d98fe0b23c34dfbe80c6a03c.jpg" class="card-img-top" alt="Bruno">
+                                <div class="img-wrapper">
+                                    <img src="assets/img/bruno_dino.jpeg" class="card-img-top" alt="Bruno">
+                                </div>
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Bruno</h5>
-                                    <div class="michi-tags mb-2">
-                                        <span class="badge badge-pets">Otras Mascotas</span>
-                                        <span class="badge badge-kid">Apta Niños</span>
+                                    
+                                    <div class="dino-specs">
+                                        <span class="spec-badge spec-age">Edad: 9 años</span>
+                                        <span class="spec-badge spec-allergy">Alergias: Pescado</span>
+                                        <span class="spec-badge spec-compat">Convivencia: Otras Masc.</span>
+                                        <span class="spec-badge spec-compat">Convivencia: Niños</span>
                                     </div>
-                                    <p class="card-text flex-grow-1">El guardián del parque, el mayor de 9 años. Es muy tranquilo y siempre cuida a los dinos más pequeños.</p>
+
+                                    <p class="card-text flex-grow-1 mt-2">El guardián del parque. Es muy tranquilo y siempre cuida a los dinos más pequeños.</p>
                                     <button class="btn btn-primary btn-sm mt-2">Adóptame</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card h-100 shadow-sm card-michi">
-                                <img src="https://i.pinimg.com/1200x/46/fc/81/46fc811361363f5ff1739de4dde69a37.jpg" class="card-img-top" alt="Nala">
+                                <div class="img-wrapper">
+                                    <img src="assets/img/nala_final.jpeg" class="card-img-top" alt="Nala">
+                                </div>
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Nala</h5>
-                                    <div class="michi-tags mb-2">
-                                        <span class="badge badge-cat">Apta Gatos</span>
+                                    
+                                    <div class="dino-specs">
+                                        <span class="spec-badge spec-age">Edad: 3 años</span>
+                                        <span class="spec-badge spec-allergy">Alergias: Ninguna</span>
+                                        <span class="spec-badge spec-compat">Convivencia: Gatos</span>
                                     </div>
-                                    <p class="card-text flex-grow-1">Nala adora las siestas al sol y los mimos infinitos. Con 3 añitos solo busca seguridad y amor.</p>
+
+                                    <p class="card-text flex-grow-1 mt-2">Nala adora las siestas al sol y los mimos infinitos. Solo busca seguridad y amor.</p>
                                     <button class="btn btn-primary btn-sm mt-2">Adóptame</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card h-100 shadow-sm card-michi">
-                                <img src="https://i.pinimg.com/1200x/61/7a/03/617a032c91678c37343209bb6bef2f6d.jpg" class="card-img-top" alt="Rocky">
+                                <div class="img-wrapper">
+                                    <img src="assets/img/rocky_dino.jpg" class="card-img-top" alt="rocky">
+                                </div>
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Rocky</h5>
-                                    <div class="michi-tags mb-2">
-                                        <span class="badge badge-kid">Apta Niños</span>
-                                        <span class="badge badge-pets">Otras Mascotas</span>
+                                    
+                                    <div class="dino-specs">
+                                        <span class="spec-badge spec-age">Edad: 6 meses</span>
+                                        <span class="spec-badge spec-allergy">Alergias: Lácteos</span>
+                                        <span class="spec-badge spec-compat">Convivencia: Niños</span>
+                                        <span class="spec-badge spec-compat">Convivencia: Otras Masc.</span>
                                     </div>
-                                    <p class="card-text flex-grow-1">Rocky tiene una mirada que derrite corazones. Con 6 meses y una energía infinita, es el mejor compañero de aventuras.</p>
+
+                                    <p class="card-text flex-grow-1 mt-2">Rocky tiene una mirada que derrite corazones. Con energía infinita, es el mejor compañero.</p>
                                     <button class="btn btn-primary btn-sm mt-2">Adóptame</button>
                                 </div>
                             </div>
@@ -346,23 +381,23 @@
             <div class="col-lg-3 col-md-6">
                 <h6 class="fw-bold mb-3">Nosotros</h6>
                 <ul class="list-unstyled footer-links">
-                    <li><a href="#">Equipo Dinopatitas</a></li>
-                    <li><a href="#">conoce la ley cholito</a></li>
-                    <li><a href="#">Contribuye</a></li>
+                    <li><a href="contacto.html">Equipo Dinopatitas</a></li>
+                    <li><a href="https://www.chileatiende.gob.cl/fichas/51436-ley-de-tenencia-responsable-de-mascotas-y-animales-de-compania-ley-cholito">conoce la ley cholito aquí</a></li>
+                    <li><a href="contacto.html">Contribuye</a></li>
                     
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h6 class="fw-bold mb-3">Comunidad</h6>
                 <ul class="list-unstyled footer-links">
-                    <li><a href="#">Refugios Amigos</a></li>
-                    <li><a href="#">Postula tu Fundación</a></li>
+                    <li><a href="https://www.fundacionayudacallejeros.cl">Refugios Amigos</a></li>
+                    <li><a href="contacto.html">Postula tu Fundación</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h6 class="fw-bold mb-3">Visítanos</h6>
                 <ul class="list-unstyled footer-info mb-3">
-                    <li><i class="bi bi-geo-alt-fill me-2"></i>Calle Ficticia 123, Viña del Mar, Chile.</li>
+                    <li><i class="bi bi-geo-alt-fill me-2"></i>cantera de piedra 301 , piedradura, Chile.</li>
                     <li><i class="bi bi-telephone-fill me-2"></i>+56 9 1234 5678</li>
                 </ul>
                 <div class="map-container rounded shadow-sm overflow-hidden">

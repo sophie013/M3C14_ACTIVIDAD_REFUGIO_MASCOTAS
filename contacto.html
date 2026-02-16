@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Dinopatitas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/objects.css">
+    <link rel="stylesheet" href="assets/css/base/base.css">
+    <link rel="stylesheet" href="assets/css/layout/layout.css">
+    <link rel="stylesheet" href="assets/css/modules/objects.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/base/utilities.css">
+    <link rel="stylesheet" href="assets/css/modules/historia.css">
+    <link rel="stylesheet" href="assets/css/modules/contacto.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dino shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dino shadow-sm sticky-top">
         <div class="container">
             <a class="navbar-brand font-dinopatitas" href="index.html">
                 <span class="dino-text">Dino</span><span class="patitas-text">Patitas</span>
             </a>
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+            <div class="d-flex mx-auto d-none d-lg-flex" style="width: 30%;">
+                <div class="input-group">
+                    <input id="mainSearch" class="form-control rounded-start-pill border-pastel" type="search" placeholder="¿A dónde vamos?">
+                    <button class="btn btn-primary rounded-end-pill px-3" onclick="ejecutarBusqueda()">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -27,11 +44,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navNosotros" role="button" data-bs-toggle="dropdown" aria-expanded="false">Nosotros</a>
                         <ul class="dropdown-menu border-0 shadow" aria-labelledby="navNosotros">
-                            <li><a class="dropdown-item" href="#">Historia</a></li>
+                            <li><a class="dropdown-item" href="index.html#historia">Historia</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Adopta</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda Solidaria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#perritosCarousel">Adopta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
                     <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navOpor" role="button" data-bs-toggle="dropdown" aria-expanded="false">Oportunidades</a>
@@ -45,8 +62,11 @@
         </div>
     </nav>
 
-    <div class="hero-construccion">
-        <img src="assets/img/perrito_construccion.jpg" alt="Cachorros constructores de Dinopatitas">
+    <div class="ratio ratio-16x9">
+        <video autoplay loop muted playsinline class="w-100 h-100 object-fit-cover">
+            <source src="assets/video/perrito_video.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
     </div>
 
     <main class="container my-5">
@@ -75,6 +95,7 @@
                                 <option>Voluntariado</option>
                                 <option>Donaciones</option>
                                 <option>Tienda Solidaria</option>
+                                <option>Postula tu Fundación</option>
                                 <option>Otro</option>
                             </select>
                         </div>
@@ -97,29 +118,52 @@
         <div class="container py-5">
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
-                    <a class="navbar-brand font-dinopatitas" href="#">
+                    <a class="navbar-brand font-dinopatitas" href="index.html">
                         <span class="dino-text">Dino</span><span class="patitas-text">Patitas</span>
                     </a>
                     <p class="small text-muted">Refugio dedicado al rescate y adopción de "dinos" en la Región de Valparaíso, Chile.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Nosotros</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html#historia">Historia</a></li>
+                        <li><a href="#">Equipo Dinopatitas</a></li>
+                        <li><a href="https://www.chileatiende.gob.cl/fichas/51436-ley-de-tenencia-responsable-de-mascotas-y-animales-de-compania-ley-cholito">conoce la ley cholito aquí</a></li>
+                        <li><a href="contacto.html">Contribuye</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Comunidad</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="https://www.fundacionayudacallejeros.cl">Refugios Amigos</a></li>
+                        <li><a href="contacto.html">Postula tu Fundación</a></li>
+                    </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h6 class="fw-bold mb-3">Visítanos</h6>
                     <ul class="list-unstyled footer-info mb-3">
-                        <li><i class="bi bi-geo-alt-fill me-2"></i>Calle Ficticia 123, Viña del Mar, Chile.</li>
+                        <li><i class="bi bi-geo-alt-fill me-2"></i>cantera de piedra 301 , piedradura, Chile.</li>
+                        <li><i class="bi bi-telephone-fill me-2"></i>+56 9 1234 5678</li>
                     </ul>
-                    <div class="map-container rounded shadow-sm overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.8256338426!2d-71.5518!3d-33.0245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDAxJzI4LjIiUyA3McKwMzMnMDYuNSJX!5e0!3m2!1ses!2scl!4v1700000000000!5m2!1ses!2scl" width="100%" height="150" style="border:0;" loading="lazy"></iframe>
-                    </div>
                 </div>
             </div>
             <hr class="my-4 text-muted">
-            <p class="small mb-0 text-center">© 2026 Dinopatitas. by ©chikisaurias malvadas y asociadas©</p>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">© 2026 Dinopatitas. by ©chikisaurias malvadas y asociadas© </p>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
-        // Script de Bootstrap para validación de formularios
         (function () {
             'use strict'
             var forms = document.querySelectorAll('.needs-validation')

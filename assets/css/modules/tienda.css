@@ -1,0 +1,28 @@
+/* css tienda solidaria */
+#cart-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#cart-list .list-group-item {
+    border-radius: 10px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+#cart-list .list-group-item:hover {
+    background-color: #1262b1;
+    transform: translateX(-2px);
+}
+
+.modal-body {
+    background-color: #0e74da;
+}
+
+.btn-trash:hover {
+    transform: scale(1.2);
+}
+
+
+/* fin de css tienda solidaria */
+

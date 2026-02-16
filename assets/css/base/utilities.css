@@ -1,0 +1,115 @@
+/* ===========================
+   TRANSICIONES Y ANIMACIONES
+   =========================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.navbar {
+    animation: slideInDown 0.5s ease-out;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    animation: slideInUp 0.3s ease-out;
+}
+
+.back-to-top:hover {
+    animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(122, 190, 187, 0.4);
+    }
+}
+
+/* Efecto hover mejorado en botones */
+.btn-primary {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 20px rgba(122, 190, 187, 0.4) !important;
+}
+
+.btn-primary:active {
+    transform: translateY(-1px) !important;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Transiciones suaves en scroll */
+.navbar, .site-footer {
+    transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+/* Scroll hint animation */
+.scroll-hint {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Loading state */
+.loading {
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+/* Badges de Convivencia cards dinos adopción*/
+.badge {
+    animation: slideInLeft 0.5s ease-out;
+}
+@keyframes slideInLeft { }
+
+

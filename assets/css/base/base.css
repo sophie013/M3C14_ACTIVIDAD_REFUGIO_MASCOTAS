@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'CattoPuroo';
+    src: url('../../fonts/catto.ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --menta-kawaii: #E0F7F4;
+    --rosa-nube: #FFEBEE;
+    --texto-cafe: #5D576B;
+    --verde-agua: #80CBC4;
+    --lavanda-michi: #c4e3e9;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #FBFCFC;
+    color: var(--texto-cafe);
+    overflow-x: hidden;
+}
+
+.font-dinopatitas {
+    font-family: 'CattoPuroo', cursive !important;
+    text-transform: lowercase;
+}
+
+
+/*footer*/
+.dino-text { color: #81C784; }
+.patitas-text { color: #4DB6AC; }
+
+/*fin footer*/
+
+/*estilos globales para títulos index */
+
+h1  {  
+    font-family: 'Lora', serif;
+    color: rgb(90, 106, 180);
+    margin-bottom: 1rem;
+  
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+ 
+}
+
+h2 {
+    color: rgb(102, 117, 186);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.75rem; 
+}
+
+h4  {
+    font-size: 1.5rem;
+    color: rgb(102, 117, 186);
+    margin-bottom: 1rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+    color: rgb(102, 117, 186);
+    margin-bottom: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+    color: rgb(102, 117, 186);
+    margin-bottom: 1rem;
+}
+
+/*fin titulos index */

@@ -1,0 +1,171 @@
+/* Tarjetas Simétricas */
+/* Tarjetas Simétricas */
+.card-michi {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor de imagen */
+.card-michi .img-wrapper {
+    width: 100%;
+    height: 260px; 
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen de adopción */
+.card-michi .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+    display: block;
+}
+
+/* Compatibilidad si usas card-img-top sin wrapper */
+.card-michi .card-img-top {
+    width: 100%;
+    height: 260px; /* 👈 igual que el wrapper */
+    object-fit: cover; /* 👈 evita imágenes encogidas */
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.card-michi .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-michi:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(122, 190, 187, 0.2);
+}
+
+.card-michi:hover .card-img-top,
+.card-michi:hover .img-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Botones de las cards */
+.card-michi .btn-primary {
+    background-color: #7abebb !important;
+    border: none !important;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.card-michi .btn-primary:hover {
+    background-color: #ffb6c1 !important;
+    color: white !important;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.4);
+}
+
+
+/* ===== CARDS DE PRODUCTOS ===== */
+.card-product {
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card-product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-product .card-img-top {
+    width: 100%;
+    height: 220px; /* 👈 tamaño uniforme */
+    object-fit: contain; /* productos sí conviene contain */
+    object-position: center;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.card-product:hover .card-img-top {
+    transform: scale(1.03);
+}
+
+
+
+/*Proceso de adopción*/
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-family: 'Lora', serif;
+    color: #0ca845;
+    font-weight: bold;
+}
+
+/* Etiquetas de info extra */
+.dino-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+    min-height: 60px; /* Altura mínima para 2 filas de badges */
+    align-content: flex-start;
+}
+
+.card-text {
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.spec-badge {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.spec-age {
+    background-color: #E0F7FA; /* Cyan pastel */
+    color: #006064;
+}
+
+.spec-allergy {
+    background-color: #FBE9E7; /* Naranja pastel */
+    color: #BF360C;
+}
+
+.spec-compat {
+    background-color: #E8F5E9; /* Verde pastel */
+    color: #1B5E20;
+}
+
+/*Fin de Tarjetas Simétricas */
