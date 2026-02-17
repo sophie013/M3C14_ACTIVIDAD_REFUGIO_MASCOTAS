@@ -49,16 +49,50 @@
     width: 100%;
 }
 
-@media (min-width: 992px) {
-    .navbar-nav .nav-link {
-        margin: 0 10px;
-    }
+/* Botón del carrito visible siempre */
+.navbar-dino .btn-outline-primary {
+    color: #5A6AB4;
+    border-color: #5A6AB4;
+    white-space: nowrap;
+}
+
+.navbar-dino .btn-outline-primary:hover {
+    background-color: #5A6AB4;
+    border-color: #5A6AB4;
+    color: white;
+}
+
+/* --- LOGOTIPO --- */
+.navbar-brand.font-dinopatitas {
+    font-size: 3.2rem !important;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.font-dinopatitas::before {
+    content: '🐾';
+    margin-right: 8px;
+}
+
+.dino-text { 
+    color: #81C784; 
+}
+
+.patitas-text { 
+    color: #4DB6AC; 
 }
 
 /* --- FOOTER --- */
 .site-footer {
+    background-color: var(--lavanda-michi);
     font-size: 0.9rem;
     padding: 3rem 0;
+}
+
+.site-footer .font-dinopatitas {
+    font-size: 2.5rem !important;
 }
 
 .footer-links a {
@@ -71,12 +105,15 @@
     padding-left: 5px;
     color: #4DB6AC;
 }
+
 /* --- MAPA --- */
 .map-container {
     width: 100%;
     height: 150px;
     overflow: hidden;
     border-radius: 15px;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .map-container iframe {
@@ -84,46 +121,97 @@
     height: 100%;
 }
 
-/* --- LOGOTIPO --- */
-.navbar-brand.font-dinopatitas {
-    font-size: 2.8rem !important;
-    line-height: 1;
-    display: inline-flex;
-    align-items: center;
+/* ================= RESPONSIVE NAVBAR ================= */
+
+/* Teléfonos - Extra pequeños */
+@media (max-width: 576px) {
+    .navbar-dino {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-brand.font-dinopatitas {
+        font-size: 1.8rem !important;
+    }
+    
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        border: none;
+    }
+    
+    .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+    }
+    
+    .navbar-toggler-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0 !important;
+    }
+    
+    .collapse.navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-bottom: 2px solid var(--menta-kawaii);
+        z-index: 1000;
+    }
+    
+    .d-lg-flex.mx-auto {
+        width: 100% !important;
+        margin: 0.5rem 0 !important;
+        order: -1;
+    }
 }
 
-.site-footer .font-dinopatitas {
-    font-size: 2.5rem !important; /* Ajustado para que no rompa el diseño */
+/* Tablets pequeñas */
+@media (min-width: 576px) and (max-width: 767px) {
+    .navbar-brand.font-dinopatitas {
+        font-size: 2rem !important;
+    }
+    
+    .d-lg-flex.mx-auto {
+        width: 40% !important;
+    }
 }
 
-.site-footer .font-dinopatitas {
-    font-size: 2.5rem !important; /* Ajustado para que no rompa el diseño */
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-brand.font-dinopatitas {
+        font-size: 2.4rem !important;
+    }
+    
+    .d-lg-flex.mx-auto {
+        width: 35% !important;
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 0 5px;
+    }
 }
 
-.font-dinopatitas::before {
-    content: '🐾';
-    margin-right: 8px;
-}
-
-
-/*tamaño frase dinopatitas */
-
-.site-footer {
-    background-color: var(--lavanda-michi);
-    font-size: 0.9rem;
-    padding: 3rem 0;
-}
-
-.navbar-brand.font-dinopatitas {
-    font-size: 3.2rem !important; /* Tamaño ajustado para lectura */
-    line-height: 1;
-    display: inline-flex;
-    align-items: center;
-}
-
-.map-container {
-    border: 3px solid white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+/* Computadores - Desktop */
+@media (min-width: 992px) {
+    .navbar-nav .nav-link {
+        margin: 0 10px;
+    }
+    
+    .navbar-brand.font-dinopatitas {
+        font-size: 3.2rem !important;
+    }
+    
+    .d-lg-flex.mx-auto {
+        width: 30% !important;
+    }
 }
 
 

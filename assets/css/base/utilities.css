@@ -105,11 +105,125 @@ html {
     to { transform: rotate(360deg); }
 }
 
-
 /* Badges de Convivencia cards dinos adopción*/
 .badge {
     animation: slideInLeft 0.5s ease-out;
 }
-@keyframes slideInLeft { }
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ================= RESPONSIVE UTILITIES ================= */
+
+/* Teléfonos - Extra pequeños */
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1, .display-4, .display-5, .display-6 {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.35rem !important;
+    }
+    
+    h3 {
+        font-size: 1.2rem !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 12px;
+    }
+    
+    p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .btn, .btn-sm, .btn-lg {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+        border-radius: 12px;
+    }
+    
+    .modal {
+        padding: 0;
+    }
+    
+    .modal-dialog {
+        margin: 1rem auto;
+    }
+    
+    .row {
+        margin-left: -6px;
+        margin-right: -6px;
+    }
+    
+    .col, .col-auto, .col-6, .col-12 {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+/* Tablets pequeñas */
+@media (min-width: 576px) and (max-width: 767px) {
+    h1, .display-4 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .container {
+        max-width: 540px;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+    h1, .display-4 {
+        font-size: 2.5rem !important;
+    }
+    
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Computadores - Desktop */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Extra Large */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
 
 

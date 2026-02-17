@@ -85,6 +85,7 @@
     gap: 10px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .social-icon {
@@ -117,10 +118,152 @@
     box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* --- EXTRA SMALL DEVICES (Teléfonos) --- */
 @media (max-width: 576px) {
     .social-icon {
         width: 44px;
         height: 44px;
         font-size: 1.05rem;
+    }
+    
+    .navbar-brand.font-dinopatitas {
+        font-size: 1.8rem !important;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0 !important;
+    }
+    
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .d-none.d-lg-flex {
+        width: 100% !important;
+        margin: 0.5rem 0 !important;
+    }
+    
+    .input-group {
+        max-width: 100%;
+    }
+    
+    .form-control, .btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .container {
+        padding: 0 12px;
+    }
+    
+    h1, .display-4 {
+        font-size: 1.75rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .btn-hero {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0 !important;
+    }
+    
+    .img-dino-header {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .modal-dialog {
+        margin: 1rem auto;
+    }
+}
+
+/* --- SMALL DEVICES (Tablets pequeñas) --- */
+@media (min-width: 576px) and (max-width: 767px) {
+    .navbar-brand.font-dinopatitas {
+        font-size: 2rem !important;
+    }
+    
+    h1, .display-4 {
+        font-size: 2rem !important;
+    }
+    
+    .img-dino-header {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .col-6 {
+        width: 50%;
+    }
+    
+    .col-md-4 {
+        width: 50%;
+    }
+}
+
+/* --- MEDIUM DEVICES (Tablets) --- */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-brand.font-dinopatitas {
+        font-size: 2.4rem !important;
+    }
+    
+    .d-none.d-lg-flex {
+        width: 25% !important;
+    }
+    
+    h1, .display-4 {
+        font-size: 2.5rem !important;
+    }
+    
+    .img-dino-header {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* --- LARGE DEVICES (Computadores) --- */
+@media (min-width: 992px) {
+    .navbar-brand.font-dinopatitas {
+        font-size: 2.8rem !important;
+    }
+    
+    .d-none.d-lg-flex {
+        width: 30% !important;
+    }
+    
+    h1, .display-4 {
+        font-size: 3rem !important;
+    }
+    
+    .img-dino-header {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* --- EXTRA LARGE DEVICES (Pantallas grandes) --- */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    h1 {
+        font-size: 3.5rem !important;
     }
 }
