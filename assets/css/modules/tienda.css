@@ -1,4 +1,30 @@
 /* css tienda solidaria */
+
+/* Estilos de título */
+.titulo-dinopatitas {
+    font-family: 'Lora', serif;
+    color: #333;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* Background para la sección principal */
+main {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 2rem !important;
+}
+
+/* Estilos de header */
+header {
+    padding: 1.5rem 0;
+}
+
+header p {
+    color: #666;
+    font-size: 1.05rem;
+}
+
 #cart-list {
     max-height: 400px;
     overflow-y: auto;
@@ -23,6 +49,37 @@
     transform: scale(1.2);
 }
 
+/* Estilos de cards de producto */
+.btn-fav { 
+    color: #e0e0e0; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    font-size: 1.5rem; 
+}
+
+.btn-fav.active { 
+    color: #ff4757 !important; 
+}
+
+.card-product { 
+    border-radius: 20px; 
+    transition: 0.3s; 
+    overflow: hidden; 
+    background-color: white;
+}
+
+.card-product:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+}
+
+.toast-container { 
+    z-index: 2055; 
+}
+
+.border-pastel { 
+    border: 2px solid #f0f0f0; 
+}
 
 /* fin de css tienda solidaria */
 

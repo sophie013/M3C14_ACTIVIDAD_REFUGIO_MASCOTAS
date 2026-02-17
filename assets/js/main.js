@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ===================================== */
 
     // HERO BOTONES
-    const btnAdoptarHero = document.querySelector('.btn-hero[href="#adopta"]');
+    const btnAdoptarHero = document.querySelector('.btn-hero[href="#perritosCarousel"]');
     const btnVoluntarioHero = document.querySelector('.btn-hero[href="#voluntariado"]');
 
     if (btnAdoptarHero) {

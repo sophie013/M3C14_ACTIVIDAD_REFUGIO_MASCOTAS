@@ -25,6 +25,17 @@
     <link rel="stylesheet" href="assets/css/modules/contacto.css">
     <link rel="stylesheet" href="assets/css/modules/laboral.css">
     <link rel="stylesheet" href="assets/css/modules/index.css">
+    
+    
+      <style>
+      body {
+
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.333)), 
+                url('../assets/img/patita_background.jpg') no-repeat center center fixed; /* Ajusta el nombre y ruta */
+    background-size: cover;
+}
+    </style>
+    
     </head> 
     <body>
 
@@ -88,11 +99,11 @@
         <div class="row">
             <div class="col-md-6"> <div class="hero-content">
                     <h1 class="hero-title">Un hogar temporal lleno de amor para nuestros Dinos</h1>
-                    <p class="hero-subtitle">Ayuda a nuestros Dinos a encontrar una familia para siempre</p>
+                    <p class="hero-subtitle"><strong>Ayuda a nuestros Dinos a encontrar una familia para siempre</strong></p>
                     
                     <div class="hero-buttons">
-                        <a href="#adoptar" class="btn btn-primary btn-hero">Adoptar</a>
-                        <a href="#voluntariado" class="btn btn-outline-light btn-hero">Ser voluntario</a>
+                        <a href="#perritosCarousel" class="btn btn-primary btn-hero rounded-pill">Adoptar</a>
+                        <a href="#voluntariado" class="btn btn-outline-light btn-hero rounded-pill">Ser voluntario</a>
                     </div>
                 </div>
             </div>
@@ -102,7 +113,7 @@
 
 <section class="dino-ayudar-section py-5">
     <div class="container">
-        <h1 class="titulo-dinopatitas text-center mb-5">Formas de Dino Ayudar 🐾</h1>
+        <h1 class="titulo-dinopatitas text-center mb-5" style="color: #5A6AB4;">Formas de Dino Ayudar 🐾</h1>
         
        <div class="row g-4">
             <div class="col-md-4">
@@ -177,7 +188,7 @@
   
 <!--inicio de nuestros dinos en adopción-->
   <div class="container my-5">
-        <h2 class="text-center mb-4">Historias de Nuestros dinos en adopción 🐾</h2>
+        <h2 class="text-center mb-4"> <strong>  Historias de Nuestros dinos en adopción 🐾</strong></h2>
         <div id="perritosCarousel" class="carousel slide" data-bs-ride="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -317,51 +328,74 @@
     </div>
 
 
-<section class="proceso-adopcion py-5">
-    <div class="container text-center">
-        <h2 class="titulo-dinopatitas mb-3">Proceso de adopción</h2>
-        <p class="mb-5 lead">Estos son los pasos que seguiremos para completar la adopción de tu nuevo amigo.</p>
+<section class="requisitos-adopcion py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="titulo-dinopatitas mb-3" style="color: #5A6AB4;"> Requisitos para una Dino-Adopción 🦴</h2>
+        </div>
 
-        <div class="row g-4 justify-content-center position-relative">
-            <div class="col-6 col-md-3 paso-item">
-                <div class="paso-img-container shadow">
-                    <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&q=80&w=200" alt="Vienes a verme">
-                </div>
-                <h3 class="h5 mt-3 fw-bold">Vienes a verme</h3>
-                <p class="small"> si hay feeling ¡me llevas a casa!</p>
+        <div class="requisitos-box p-4 bg-white shadow-sm rounded-4">
+            <div class="text-center mb-4">
+                
+                <h3 class="fw-bold"><strong>Detalle de Requisitos</strong></h3>
             </div>
 
-            <div class="col-6 col-md-3 paso-item">
-                <div class="paso-img-container shadow">
-                    <img src="https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/61d1e1af-c414-4c21-838b-2f32569d5ec4/dog-owner-and-doctor-shake-hands.png?w=1920&q=75&auto=format" alt="Documentamos">
-                </div>
-                <h3 class="h5 mt-3 fw-bold">Documentamos</h3>
-                <p class="small"> oficialmente tuyo, terminamos con las consultas veterinarias e inscripcion </p>
-            </div>
-
-            <div class="col-6 col-md-3 paso-item">
-                <div class="paso-img-container shadow">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoxCx_hLgz-J6YetBPV4w9hgJvGgnTMT3LJg&s" alt="Comenzamos">
-                </div>
-                <h3 class="h5 mt-3 fw-bold">Comenzamos</h3>
-                <p class="small">una vida juntos de dinoaventuras </p>
-            </div>
-
-            <div class="col-6 col-md-3 paso-item">
-                <div class="paso-img-container shadow">
-                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=200" alt="Estamos pendientes">
-                </div>
-                <h3 class="h5 mt-3 fw-bold">Estamos pendientes</h3>
-                <p class="small">realizando seguimientos constantes</p>
+            <div class="table-responsive">
+                <table class="table dino-table table-borderless">
+                    <thead>
+                        <tr class="table-dino-header">
+                            <th style="width: 30%;">📋 Categoría</th>
+                            <th style="width: 70%;">📑 Detalle del Requisito</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-dino-light">
+                            <td class="align-middle"><strong>Legal y Registro</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Ser mayor de 18 años.</li>
+                                    <li>Compromiso Inscripción de identidad en Registro Nacional de Mascotas (Ley 21.020).</li>
+                                    <li>Implantación de Microchip.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="bg-dino-white">
+                            <td class="align-middle"><strong>Entorno y Hogar</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Residencia establecida con cierre perimetral seguro (evitar escapes).</li>
+                                    <li>Si es departamento, mallas de seguridad y permiso de administración.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="bg-dino-light">
+                            <td class="align-middle"><strong>Tenencia Responsable</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Capacidad económica para alimentación de alta calidad y gastos veterinarios.</li>
+                                    <li>Compromiso de cuidado a largo plazo.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="bg-dino-white">
+                            <td class="align-middle"><strong>Evaluación Dino</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Entrevista personal y cuestionario de pre-adopción aprobado.</li>
+                                    <li>Periodo de adaptación obligatorio con el nuevo integrante.</li>
+                                    <li>Vacunas y desparasitación al día.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </section>
-
-
-
     <!--fin de nuestros dinos en adopción-->
-    
+
+   
 </main>
 
 <footer class="site-footer mt-5">

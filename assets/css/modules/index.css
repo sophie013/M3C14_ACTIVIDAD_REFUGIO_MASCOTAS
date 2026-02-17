@@ -228,11 +228,11 @@
 }
 
 .btn-outline-light.btn-hero:hover {
-    background-color: #f0f0f0; /* Gris muy clarito al pasar el mouse */
-    color: #4a5a94;
+    background-color: #5a6ab4; /* Color más visible - azul de la marca */
+    color: white; /* Texto blanco para mejor contraste */
     transform: translateY(-3px); /* Sube un poquito */
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    border-color: #f0f0f0;
+    box-shadow: 0 8px 25px rgba(90, 106, 180, 0.4); /* Sombra más visible */
+    border-color: #5a6ab4;
 }
 
 /* El botón de Adoptar (Principal) */
@@ -240,5 +240,24 @@
     background-color: #ffb6c1;
     border: none;
     color: white;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+}
+
+.btn-primary.btn-hero:hover {
+    background-color: #ffa3b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 182, 193, 0.4);
+}
+
+/* Espaciado entre botones */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px; /* Separación del texto superior */
 }
 /*fin hero perrito*/

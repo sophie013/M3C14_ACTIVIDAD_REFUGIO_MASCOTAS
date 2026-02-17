@@ -23,7 +23,8 @@ body {
 
 .font-dinopatitas {
     font-family: 'CattoPuroo', cursive !important;
-    text-transform: lowercase;
+    font-weight: normal !important;
+    
 }
 
 

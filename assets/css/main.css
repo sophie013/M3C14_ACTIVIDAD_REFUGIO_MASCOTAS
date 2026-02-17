@@ -1,0 +1,80 @@
+/* Paleta de colores basada en tu imagen */
+:root {
+    --dino-green: #a8e6cf;
+    --dino-pink: #dba6aa;
+    --dino-light-gray: #f8f9fa;
+}
+
+.requisitos-box {
+    border: 3px dashed var(--dino-pink); 
+    background-color: #9eced3;
+    margin-top: -30px; /* Efecto de solapado con la imagen */
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.dino-table {
+    border-radius: 12px;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+/* Cabecera de la tabla */
+.table-dino-header {
+    background-color: var(--dino-green) !important;
+    color: #444;
+}
+
+.table-dino-header th {
+    padding: 18px !important;
+    border: none;
+    font-weight: 600;
+}
+
+/* Filas alternas para imitar la imagen */
+.bg-dino-light {
+    background-color: var(--dino-light-gray) !important;
+}
+
+.bg-dino-white {
+    background-color: #ffffff !important;
+}
+
+.dino-table td {
+    padding: 20px !important;
+    color: #555;
+    border-bottom: 1px solid #eee !important;
+}
+
+/* Estilo de las huellitas */
+.dino-table ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: '🐾 ';
+}
+
+.dino-table ul li {
+    margin-bottom: 6px;
+}
+
+/* Imagen de cabecera con efecto marco */
+.img-dino-header {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 10px solid white;
+    border-radius: 50% 50% 10% 10%; /* Un toque más juguetón */
+    background-color: var(--dino-green);
+    transition: transform 0.3s ease;
+}
+
+.img-dino-header:hover {
+    transform: translateY(-5px) rotate(2deg);
+}
+
+.titulo-dinopatitas {
+    font-family: 'Nunito', sans-serif; /* Sugerida para este estilo */
+    color: #333;
+    font-weight: 800;
+}

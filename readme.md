@@ -82,32 +82,34 @@ Te invitamos a llevarte un “rugido” que parece un ladrido, pero no lo es. So
 
 cosas por terminar 
 
-borrar imagenes de assets que se cambiaron y no se usaran. 
-
-hero index  arreglar boton que sea redondo igual que el de ser voluntario
 
 
-tienda cambiar los titulos y background 
--quitar boton de plato en los cards o arreglarlo para mensaje toast de producto favorito. 
 
 
-contacto
-verificar formulario 
-titulos 
-background 
+
+
+
+
+
+corregir font para que se vea de gatito 
 
 
 laboral 
-titulos 
-hero corregir 
-formulario copiar el mismo en voluntario ya que funciona bien y corregir 
+
+hero corregir   para que se vea igual al hero de main html 
+
 
 
 voluntario 
 revisar hero 
-copiar mismo formulario de laboral y adaptarlo a esas opcciones 
-titulos. 
 
 
 
-buscador verificar que buscador ejecute bien la busqueda de productos y elementos en web 
+
+
+
+
+
+
+
+

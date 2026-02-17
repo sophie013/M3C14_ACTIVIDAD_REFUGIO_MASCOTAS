@@ -1,7 +1,18 @@
 /*estilos de àrea voluntariado */
+
+/* Estilos de títulos Dinopatitas */
+.font-dinopatitas {
+    font-family: 'Lora', serif;
+    color: #333;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.text-center h1.font-dinopatitas {
+    margin-bottom: 1rem;
+}
+
 /* --- Sección Hero de Dinopatitas voluntariado--- */
-
-
 .hero-construccion {
     width: 100%;
     max-width: 1140px; 
@@ -22,7 +33,6 @@
     object-position: center 60%; 
     transition: transform 0.5s ease;
 }
-
 
 .hero-construccion:hover img {
     transform: scale(1.02);
