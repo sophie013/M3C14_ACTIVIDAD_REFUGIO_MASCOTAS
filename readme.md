@@ -91,8 +91,7 @@ cosas por terminar
 
 
 
-corregir font para que se vea de gatito 
-
+que navbar de adoptame linkee bien 
 
 laboral 
 
