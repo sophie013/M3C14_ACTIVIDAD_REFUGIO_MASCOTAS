@@ -1,6 +1,52 @@
 /* --- HEADER / NAVBAR --- */
 .navbar-dino {
     padding: 1rem 0;
+    background-color: white !important;
+    border-bottom: 2px solid var(--menta-kawaii);
+    padding: 0.8rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-dino:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos hover suaves para los nav-link */
+.navbar-nav .nav-link {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: #333 !important;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #7abebb 0%, #4DB6AC 100%);
+    transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4DB6AC !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+    color: #4DB6AC !important;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link.active::after {
+    width: 100%;
 }
 
 @media (min-width: 992px) {
@@ -50,6 +96,10 @@
     font-size: 2.5rem !important; /* Ajustado para que no rompa el diseño */
 }
 
+.site-footer .font-dinopatitas {
+    font-size: 2.5rem !important; /* Ajustado para que no rompa el diseño */
+}
+
 .font-dinopatitas::before {
     content: '🐾';
     margin-right: 8px;
@@ -58,20 +108,10 @@
 
 /*tamaño frase dinopatitas */
 
-
-
-/* En layout.css o main.css */
-
 .site-footer {
     background-color: var(--lavanda-michi);
     font-size: 0.9rem;
     padding: 3rem 0;
-}
-
-.navbar-dino {
-    background-color: white !important;
-    border-bottom: 2px solid var(--menta-kawaii);
-    padding: 0.8rem 0;
 }
 
 .navbar-brand.font-dinopatitas {
@@ -80,8 +120,6 @@
     display: inline-flex;
     align-items: center;
 }
-
-
 
 .map-container {
     border: 3px solid white;

@@ -79,13 +79,26 @@
 /* Flechas decorativas (solo en pantallas grandes) */
 @media (min-width: 768px) {
     .paso-item:not(:last-child)::after {
-        content: '➔';
+        content: '→';
         position: absolute;
-        top: 25%;
-        right: -10%;
-        font-size: 2rem;
-        color: var(--dino-green);
-        opacity: 0.5;
+        top: 30%;
+        right: -20%;
+        font-size: 4rem;
+        color: #82bdb9;
+        opacity: 0.9;
+        font-weight: bold;
+        animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+        0%, 100% {
+            opacity: 0.9;
+            transform: translateX(0);
+        }
+        50% {
+            opacity: 1;
+            transform: translateX(8px);
+        }
     }
 }
 
@@ -117,6 +130,43 @@
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
     border-color: #ffb6c1 !important; /* Borde rosita al pasar el mouse */
+}
+
+/* Asegurar color blanco en header de requisitos */
+.card .bg-primary h4 {
+    color: #ffffff !important;
+}
+
+/* Ajustes responsivos adicionales para Proceso de Adopción */
+.proceso-adopcion .paso-img-container {
+    width: 140px;
+    height: 140px;
+}
+
+@media (max-width: 768px) {
+    .proceso-adopcion .paso-img-container {
+        width: 110px;
+        height: 110px;
+    }
+    .proceso-adopcion .titulo-dinopatitas {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .proceso-adopcion .paso-img-container {
+        width: 90px;
+        height: 90px;
+    }
+    .proceso-adopcion .titulo-dinopatitas {
+        font-size: 1.6rem;
+    }
+    .proceso-adopcion .paso-item h3 {
+        font-size: 1rem;
+    }
+    .proceso-adopcion .paso-item p {
+        font-size: 0.9rem;
+    }
 }
 
 .dino-img-container {
@@ -161,32 +211,41 @@
 .hero-section {
     position: relative;
     width: 100%;
-    min-height: 90vh;
-
     
-    background-image: url("https://res.cloudinary.com/dj0cbwsvk/image/upload/v1771017745/hero_dog_f1gene.jpg");
+    /* 🔽 Antes 90vh (muy grande) */
+    min-height: 65vh; /* más elegante y no gigante */
 
+    /* Imagen hero */
+    background-image: url("https://res.cloudinary.com/dj0cbwsvk/image/upload/v1771017745/hero_dog_f1gene.jpg");
+    
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
+
+    /* EFECTO SCROLL SUAVE (parallax elegante) */
+    background-attachment: fixed;
+
     display: flex;
     align-items: center;
-    background-attachment: fixed;
 }
 
 /* Capa suave pastel para que el texto se lea */
 .hero-overlay {
     width: 100%;
-    min-height: 90vh;
+    min-height: 65vh; /* igual que el hero */
+    
+    /* degradado pastel suave como tu diseño kawaii */
     background: linear-gradient(
         90deg,
         rgba(122, 190, 185, 0.85) 0%,
-        rgba(122, 190, 185, 0.6) 40%,
-        rgba(255, 255, 255, 0) 70%
+        rgba(122, 190, 185, 0.65) 35%,
+        rgba(255, 255, 255, 0) 75%
     );
+
     display: flex;
     align-items: center;
 }
+
 
 /* Contenido */
 
@@ -261,3 +320,17 @@
     margin-top: 25px; /* Separación del texto superior */
 }
 /*fin hero perrito*/
+
+
+/* 📱 Arreglo móvil (parallax */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 50vh; /* más compacto en celular */
+        background-attachment: scroll; /* evita bug en móviles */
+        background-position: center;
+    }
+
+    .hero-overlay {
+        min-height: 50vh;
+    }
+}

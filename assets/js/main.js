@@ -126,16 +126,21 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.forEach(link => {
         link.addEventListener("click", function (e) {
             const texto = link.textContent.toLowerCase();
+            const href = link.getAttribute('href') || '';
 
             if (texto.includes("adopta")) {
                 e.preventDefault();
+                // Si estamos en index.html, busca el carousel
                 const carousel = document.querySelector('#perritosCarousel');
                 if (carousel) {
                     carousel.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    // Si estamos en otro archivo, redirige a index.html con el hash
+                    window.location.href = "index.html#perritosCarousel";
                 }
             }
 
-            if (texto.includes("contacto")) {
+            if (texto.includes("contacto") && !href.includes("contacto.html")) {
                 e.preventDefault();
                 window.location.href = "contacto.html";
             }
@@ -244,6 +249,21 @@ document.addEventListener("DOMContentLoaded", function () {
        ANIMACIÓN AL CARGAR
     ===================================== */
     document.body.style.animation = 'fadeIn 0.6s ease-in-out';
+
+    /* Efectos y accesibilidad para iconos sociales */
+    const socialIcons = document.querySelectorAll('.social-icon');
+    socialIcons.forEach(icon => {
+        icon.addEventListener('click', () => {
+            icon.classList.add('clicked');
+            setTimeout(() => icon.classList.remove('clicked'), 250);
+        });
+
+        icon.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                icon.click();
+            }
+        });
+    });
 
 });
 
