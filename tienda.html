@@ -29,15 +29,20 @@
         .border-pastel { border: 2px solid #5815bb00; }
         .card-product .btn-primary { background-color: #3e8fbe !important; border-color: #5A6AB4 !important; }
         .card-product .btn-primary:hover { background-color: #3b7590 !important; border-color: #4a5a94 !important; }
-     body {
-    background-image: url('../assets/img/patita_background.jpg'); /* Ajusta el nombre y ruta */
-    background-size: cover;       /* Cubre toda la pantalla */
-    background-position: center;  /* Centra la imagen */
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Opcional: el fondo no se mueve al hacer scroll */
-    margin: 0;
-    padding: 0;
+
+html {
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+    url("assets/img/patita_background.jpg") center center / cover no-repeat fixed;
+    min-height: 100%;
 }
+
+body {
+    background: transparent !important;
+    min-height: 100vh;
+}
+
+
     </style>
 </head>
 <body>
